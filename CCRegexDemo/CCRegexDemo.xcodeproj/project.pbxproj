@@ -18,6 +18,8 @@
 		00B35A1320E1FC5A00B8B2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B35A1220E1FC5A00B8B2FA /* Assets.xcassets */; };
 		00B35A1620E1FC5A00B8B2FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B35A1420E1FC5A00B8B2FA /* Main.storyboard */; };
 		00B35A1920E1FC5A00B8B2FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B35A1820E1FC5A00B8B2FA /* main.m */; };
+		00B35A2120E1FDBE00B8B2FA /* CCRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B35A2020E1FDBE00B8B2FA /* CCRegex.m */; };
+		00B35A2220E1FDBE00B8B2FA /* CCRegex.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B35A2020E1FDBE00B8B2FA /* CCRegex.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		00B35A1720E1FC5A00B8B2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00B35A1820E1FC5A00B8B2FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00B35A1A20E1FC5A00B8B2FA /* CCRegexOSX.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CCRegexOSX.entitlements; sourceTree = "<group>"; };
+		00B35A1F20E1FDBE00B8B2FA /* CCRegex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCRegex.h; sourceTree = "<group>"; };
+		00B35A2020E1FDBE00B8B2FA /* CCRegex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCRegex.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		00B359E420E1FC3500B8B2FA = {
 			isa = PBXGroup;
 			children = (
+				00B35A1E20E1FDAF00B8B2FA /* CCRegex */,
 				00B359EF20E1FC3500B8B2FA /* CCRegexDemo */,
 				00B35A0B20E1FC5900B8B2FA /* CCRegexOSX */,
 				00B359EE20E1FC3500B8B2FA /* Products */,
@@ -109,6 +114,16 @@
 				00B35A1A20E1FC5A00B8B2FA /* CCRegexOSX.entitlements */,
 			);
 			path = CCRegexOSX;
+			sourceTree = "<group>";
+		};
+		00B35A1E20E1FDAF00B8B2FA /* CCRegex */ = {
+			isa = PBXGroup;
+			children = (
+				00B35A1F20E1FDBE00B8B2FA /* CCRegex.h */,
+				00B35A2020E1FDBE00B8B2FA /* CCRegex.m */,
+			);
+			name = CCRegex;
+			path = ../CCRegex;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00B359F520E1FC3500B8B2FA /* ViewController.m in Sources */,
+				00B35A2120E1FDBE00B8B2FA /* CCRegex.m in Sources */,
 				00B35A0020E1FC3600B8B2FA /* main.m in Sources */,
 				00B359F220E1FC3500B8B2FA /* AppDelegate.m in Sources */,
 			);
@@ -222,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00B35A1120E1FC5900B8B2FA /* ViewController.m in Sources */,
+				00B35A2220E1FDBE00B8B2FA /* CCRegex.m in Sources */,
 				00B35A1920E1FC5A00B8B2FA /* main.m in Sources */,
 				00B35A0E20E1FC5900B8B2FA /* AppDelegate.m in Sources */,
 			);
