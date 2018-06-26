@@ -8,14 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-#ifdef    __OBJC__
-#import <Foundation/NSArray.h>
-#import <Foundation/NSError.h>
-#import <Foundation/NSObjCRuntime.h>
-#import <Foundation/NSRange.h>
-#import <Foundation/NSString.h>
-#endif // __OBJC__
-
 #include <limits.h>
 #include <stdint.h>
 #include <sys/types.h>
@@ -25,22 +17,6 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-    
-#ifndef   REGEXKITLITE_VERSION_DEFINED
-#define   REGEXKITLITE_VERSION_DEFINED
-    
-#define _RKL__STRINGIFY(b)       #b
-#define _RKL_STRINGIFY(a)        _RKL__STRINGIFY(a)
-#define _RKL_JOIN_VERSION(a,b)   _RKL_STRINGIFY(a##.##b)
-#define _RKL_VERSION_STRING(a,b) _RKL_JOIN_VERSION(a,b)
-    
-#define REGEXKITLITE_VERSION_MAJOR 4
-#define REGEXKITLITE_VERSION_MINOR 0
-    
-#define REGEXKITLITE_VERSION_CSTRING   _RKL_VERSION_STRING(REGEXKITLITE_VERSION_MAJOR, REGEXKITLITE_VERSION_MINOR)
-#define REGEXKITLITE_VERSION_NSSTRING  @REGEXKITLITE_VERSION_CSTRING
-    
-#endif // REGEXKITLITE_VERSION_DEFINED
     
 #if !defined(RKL_BLOCKS) && defined(NS_BLOCKS_AVAILABLE) && (NS_BLOCKS_AVAILABLE == 1)
 #define RKL_BLOCKS 1
