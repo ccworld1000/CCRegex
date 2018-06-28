@@ -7,16 +7,9 @@
 //  https://github.com/ccworld1000/CCRegex
 
 #import "CCRegex.h"
+#import <CoreFoundation/CoreFoundation.h>
+#import <objc/runtime.h>
 
-#include <CoreFoundation/CFBase.h>
-#include <CoreFoundation/CFArray.h>
-#include <CoreFoundation/CFString.h>
-#import <Foundation/NSArray.h>
-#import <Foundation/NSDictionary.h>
-#import <Foundation/NSError.h>
-#import <Foundation/NSException.h>
-#import <Foundation/NSNotification.h>
-#import <Foundation/NSRunLoop.h>
 #ifdef    __OBJC_GC__
 #import <Foundation/NSGarbageCollector.h>
 #define RKL_STRONG_REF __strong
@@ -26,12 +19,6 @@
 #define RKL_GC_VOLATILE
 #endif // __OBJC_GC__
 
-#if (defined(TARGET_OS_EMBEDDED) && (TARGET_OS_EMBEDDED != 0)) || (defined(TARGET_OS_IPHONE) && (TARGET_OS_IPHONE != 0)) || (defined(MAC_OS_X_VERSION_MIN_REQUIRED) && (MAC_OS_X_VERSION_MIN_REQUIRED >= 1050))
-#include <objc/runtime.h>
-#else
-#include <objc/objc-runtime.h>
-#endif
-
 #include <libkern/OSAtomic.h>
 #include <mach-o/loader.h>
 #include <AvailabilityMacros.h>
@@ -40,17 +27,6 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stdio.h>
-
-#import "CCRegex.h"
-
-// If the gcc flag -mmacosx-version-min is used with, for example, '=10.2', give a warning that the libicucore.dylib is only available on >= 10.3.
-// If you are reading this comment because of this warning, this is to let you know that linking to /usr/lib/libicucore.dylib will cause your executable to fail on < 10.3.
-// You will need to build your own version of the ICU library and link to that in order for RegexKitLite to work successfully on < 10.3.  This is not simple.
-
-#if MAC_OS_X_VERSION_MIN_REQUIRED < 1030
-#warning The ICU dynamic shared library, /usr/lib/libicucore.dylib, is only available on Mac OS X 10.3 and later.
-#warning You will need to supply a version of the ICU library to use RegexKitLite on Mac OS X 10.2 and earlier.
-#endif
 
 ////////////
 #pragma mark Compile time tunables

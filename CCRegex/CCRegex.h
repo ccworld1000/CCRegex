@@ -29,25 +29,7 @@ extern "C" {
 #if       defined(_RKL_BLOCKS_ENABLED) && !defined(__BLOCKS__)
 #warning RegexKitLite support for Blocks is enabled, but __BLOCKS__ is not defined.  This compiler may not support Blocks, in which case the behavior is undefined.  This will probably cause numerous compiler errors.
 #endif // defined(_RKL_BLOCKS_ENABLED) && !defined(__BLOCKS__)
-    
-    // For Mac OS X < 10.5.
-#ifndef   NSINTEGER_DEFINED
-#define   NSINTEGER_DEFINED
-#if       defined(__LP64__) || defined(NS_BUILD_32_LIKE_64)
-    typedef long           NSInteger;
-    typedef unsigned long  NSUInteger;
-#define NSIntegerMin   LONG_MIN
-#define NSIntegerMax   LONG_MAX
-#define NSUIntegerMax  ULONG_MAX
-#else  // defined(__LP64__) || defined(NS_BUILD_32_LIKE_64)
-    typedef int            NSInteger;
-    typedef unsigned int   NSUInteger;
-#define NSIntegerMin   INT_MIN
-#define NSIntegerMax   INT_MAX
-#define NSUIntegerMax  UINT_MAX
-#endif // defined(__LP64__) || defined(NS_BUILD_32_LIKE_64)
-#endif // NSINTEGER_DEFINED
-    
+        
 #ifndef   RKLREGEXOPTIONS_DEFINED
 #define   RKLREGEXOPTIONS_DEFINED
     
